@@ -7,45 +7,29 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Installazione Laravel
+# LARAVEL MIGRATION SEEDER
 
-```bash
-cd your parent_folder_path
+- Creiamo un database da phpmyadmin (es. train_db)
+- Creiamo una tabella trains e relativa Migration <br>
 
-composer create-project --prefer-dist laravel/laravel:^9.2 your_project_name_here
+<br>
+Ogni treno dovrà avere: <br>
 
-cd your_project_name_here
+- Azienda
+- Stazione di partenza
+- Stazione di arrivo
+- Orario di partenza
+- Orario di arrivo
+- Codice Treno
+- Numero Carrozze
+- In orario
+- Cancellato
+<br>
 
-code . -r
+È probabile che siano necessarie altre colonne per far funzionare la tabella nel modo corretto. <br>
 
-php artisan serve
+Create il Model Train e Aggiungete un seeder per la classe Train usando FakerPHP. <br>
+Create relativo ed un Controller per mostrare nella home page tutti i treni che sono in partenza dalla data odierna. <br>
 
-ctrl + c
-
-```
-## Configurazione Laravel
-```bash
-composer require pacificdev/laravel_9_preset
-
-php artisan preset:ui bootstrap
-
-npm install
-
-npm install --save @fortawesome/fontawesome-free
-
-#in vite config aggiungo agli alias
-'~@fortawesome': path.resolve(__dirname, 'node_modules/@fortawesome'),
-
-#copio la cartella dei webfont e se voglio la rinomino
-
-#comandi git
-
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin your_git_url 
-git push -u origin main
-
-
-```
+## Bonus:
+Create relativo Controller e rotta per mostrare tutti i treni che sono in partenza dalla data odierna.
