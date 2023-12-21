@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $train = Train::all();
+        $train = Train::where('departure_date', '2023-12-21')->get();
         return view("home", compact("train"));
     }
 }
